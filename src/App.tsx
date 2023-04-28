@@ -80,7 +80,7 @@ export default () => {
                     else if (symbols.includes(operation) && symbols.includes(oldEquation[0])) return oldEquation
                     else if (symbols.includes(operation) && symbols.includes(oldEquation[oldEquation.length - 1])) return oldEquation
                     else if (symbols.includes(operation) && oldEquation[oldEquation.length - 1] === operation) return oldEquation
-                    else if (split[split.length - 1].length > 0 && split[split.length - 1].includes(operation)) return oldEquation
+                    else if (symbols.includes(operation) && split[split.length - 1].length > 0 && split[split.length - 1].includes(operation)) return oldEquation
                     else return oldEquation + operation
                 }))
 
